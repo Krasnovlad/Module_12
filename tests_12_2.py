@@ -11,13 +11,13 @@ class TournamentTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.usain = Runner('Усэйн', 10)
-        self.andrei = Runner('Андрей', 9)  # быстрый, однако, парень
+        self.andrei = Runner('Андрей', 9)  
         self.nick = Runner('Ник', 3)
 
 
     def test_start1(self):
         tour1 = Tournament(90, self.usain, self.nick)
-        # для более понятной структуры из объектов (Runner) вытаскиваю позицию и участника
+        
         TournamentTest.all_results['tour1'] = {
             place: participant.name for place, participant in tour1.start().items()
         }
