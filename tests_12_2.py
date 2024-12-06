@@ -17,7 +17,6 @@ class TournamentTest(unittest.TestCase):
 
     def test_start1(self):
         tour1 = Tournament(90, self.usain, self.nick)
-        
         TournamentTest.all_results['tour1'] = {
             place: participant.name for place, participant in tour1.start().items()
         }
